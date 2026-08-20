@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUZAIL | AI Automation & Integration Specialist</title>
+  <meta name="description" content="GUZAIL is an AI Automation & Integration Specialist focused on AI agents, RAG systems, workflow automation, SEO, PPC, and digital growth." />
+  <meta property="og:title" content="GUZAIL | AI Automation & Integration Specialist" />
+  <meta property="og:description" content="Building Intelligent Systems That Drive Business Growth through AI Automation, Intelligent Agents, and Digital Growth." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#090d16',
+              900: '#0f172a',
+              850: '#131f38',
+              800: '#1e293b',
+              700: '#334155',
+            },
+            royal: {
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+            },
+            slate: {
+              custom: '#64748b',
+              light: '#94a3b8',
+              lighter: '#cbd5e1',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'glow-sm': '0 0 15px rgba(37, 99, 235, 0.25)',
+            'glow-md': '0 0 30px rgba(37, 99, 235, 0.35)',
+            'glow-lg': '0 0 50px rgba(37, 99, 235, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Professional Polish Theme Custom Styles */
+    body {
+      background-color: #0f172a;
+      color: #f1f5f9;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Grid pattern from Professional Polish theme */
+    .grid-pattern {
+      background-image: radial-gradient(#1e293b 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* Glow accent from Professional Polish theme */
+    .glow-accent {
+      background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+    }
+
+    .glow-accent-secondary {
+      background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
+    }
+
+    /* Glassmorphism panel & cards */
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.6);
+    }
+
+    .glass-card {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(51, 65, 85, 0.5);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(37, 99, 235, 0.7);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2), 0 0 15px rgba(37, 99, 235, 0.15);
+    }
+
+    /* Skill bar styling from Professional Polish theme */
+    .skill-bar {
+      height: 6px;
+      border-radius: 3px;
+      background: #334155;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(90deg, #2563eb, #3b82f6);
+      width: 0%;
+      border-radius: 3px;
+      transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reveal animations */
+    .reveal-elem {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-elem.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pulse node animations */
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.95; transform: scale(1.08); }
+    }
+
+    .pulse-node {
+      animation: pulse-glow 3s infinite ease-in-out;
+    }
+
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .float-item {
+      animation: float-slow 4s infinite ease-in-out;
+    }
+
+    /* Reduce motion support */
+    @media (prefers-reduced-motion: reduce) {
+      .reveal-elem {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .skill-progress {
+        transition: none !important;
+      }
+      .pulse-node, .float-item {
+        animation: none !important;
+      }
+      html {
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#0f172a] text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- BACKGROUND ATMOSPHERE WITH PROFESSIONAL POLISH RADIAL PATTERN & GLOW -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div class="grid-pattern absolute inset-0 opacity-40"></div>
+    <div class="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] glow-accent pointer-events-none"></div>
+    <div class="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] glow-accent-secondary pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/3 w-[450px] h-[450px] glow-accent opacity-60 pointer-events-none"></div>
+  </div>
+
+  <!-- STICKY NAVBAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between glass-panel rounded-2xl px-5 py-3 border border-white/10 shadow-lg">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-royal-500 rounded-lg p-1" aria-label="GUZAIL Homepage">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-royal-500 to-royal-700 flex items-center justify-center text-white font-bold text-sm shadow-glow-sm">
+          G
+        </div>
+        <span class="font-bold text-xl tracking-tight text-white group-hover:text-royal-400 transition-colors">
+          GUZAIL<span class="text-royal-500 font-black">.</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium text-slate-300" aria-label="Main Navigation">
+        <a href="#about" class="nav-link px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">About</a>
+        <a href="#skills" class="nav-link px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Skills</a>
+        <a href="#services" class="nav-link px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Services</a>
+        <a href="#projects" class="nav-link px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Projects</a>
+        <a href="#outcomes" class="nav-link px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Outcomes</a>
+        <a href="#contact" class="nav-link px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Desktop Header CTA & Admin Trigger -->
+      <div class="hidden md:flex items-center gap-3">
+        <button type="button" onclick="openAdminPortal()" class="relative inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 hover:text-white border border-slate-700/70 text-xs font-semibold transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500" title="Admin Portal (Password: guzail123)">
+          <i class="fa-solid fa-lock text-blue-400 text-xs"></i>
+          <span>Admin</span>
+          <span id="nav-inquiries-badge" class="hidden w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        </button>
+        <a href="#contact" class="inline-flex items-center gap-2 bg-royal-600 hover:bg-royal-500 text-white text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-200 shadow-glow-sm hover:shadow-glow-md focus:outline-none focus:ring-2 focus:ring-royal-400">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" type="button" class="md:hidden flex items-center justify-center w-10 h-10 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-royal-500" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i id="hamburger-icon" class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
+        <i id="close-icon" class="fa-solid fa-xmark text-lg hidden" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden max-w-7xl mx-auto mt-2 glass-panel rounded-2xl p-5 border border-white/10 shadow-2xl transition-all">
+      <nav class="flex flex-col gap-2 text-base font-medium text-slate-300" aria-label="Mobile Navigation">
+        <a href="#about" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-white/5 hover:text-white flex items-center justify-between">
+          <span>About</span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </a>
+        <a href="#skills" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-white/5 hover:text-white flex items-center justify-between">
+          <span>Skills</span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </a>
+        <a href="#services" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-white/5 hover:text-white flex items-center justify-between">
+          <span>Services</span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </a>
+        <a href="#projects" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-white/5 hover:text-white flex items-center justify-between">
+          <span>Projects</span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </a>
+        <a href="#outcomes" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-white/5 hover:text-white flex items-center justify-between">
+          <span>Outcomes</span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </a>
+        <a href="#contact" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-white/5 hover:text-white flex items-center justify-between">
+          <span>Contact</span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </a>
+        <button type="button" onclick="closeMobileMenu(); openAdminPortal();" class="w-full px-4 py-2.5 rounded-xl bg-navy-800/80 hover:bg-navy-700 text-slate-300 hover:text-white flex items-center justify-between border border-slate-700/60">
+          <span class="flex items-center gap-2">
+            <i class="fa-solid fa-lock text-blue-400"></i> Admin Panel
+          </span>
+          <i class="fa-solid fa-chevron-right text-xs text-slate-500"></i>
+        </button>
+        <div class="pt-3 mt-2 border-t border-white/10">
+          <a href="#contact" class="mobile-nav-link w-full py-3 bg-royal-600 hover:bg-royal-500 text-white font-semibold rounded-xl text-center flex items-center justify-center gap-2 shadow-glow-sm">
+            <span>Get in Touch</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="main-content" class="relative z-10">
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 flex items-center">
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-7 reveal-elem active">
+          
+          <!-- Small Eyebrow Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royal-900/60 border border-royal-500/30 text-royal-400 text-xs font-semibold tracking-wider uppercase font-mono shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-royal-400 animate-ping"></span>
+            <span>AI AUTOMATION • AI INTEGRATION • DIGITAL GROWTH</span>
+          </div>
+
+          <!-- Main Headline -->
+          <div class="space-y-3">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+              AI Automation & <br class="hidden sm:inline" />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-royal-400 via-blue-200 to-white">
+                Integration Specialist
+              </span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-slate-300">
+              Building Intelligent Systems That Drive Business Growth.
+            </p>
+          </div>
+
+          <!-- Supporting Text -->
+          <p class="text-slate-400 text-base sm:text-lg leading-relaxed max-w-2xl">
+            I design AI-powered automation, intelligent agents, and digital growth systems that help businesses reduce repetitive work, improve customer experiences, generate opportunities, and scale more efficiently.
+          </p>
+
+          <!-- Highlight Tagline -->
+          <div class="p-4 rounded-xl bg-navy-800/70 border-l-4 border-royal-500 text-slate-200 font-medium text-sm sm:text-base italic shadow-sm">
+            “Leveraging AI for smarter growth, not just automation.”
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="inline-flex items-center gap-2.5 bg-royal-600 hover:bg-royal-500 text-white font-semibold text-base px-6 py-3.5 rounded-xl transition-all duration-200 shadow-glow-sm hover:shadow-glow-md hover:-translate-y-0.5">
+              <span>View Projects</span>
+              <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-slate-200 hover:text-white font-semibold text-base px-6 py-3.5 rounded-xl border border-white/10 transition-all duration-200 hover:-translate-y-0.5">
+              <i class="fa-solid fa-handshake text-royal-400"></i>
+              <span>Let's Work Together</span>
+            </a>
+          </div>
+
+          <!-- Trust / Expertise Indicator Badges -->
+          <div class="pt-4 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-300">
+            <span class="px-3 py-1.5 rounded-lg bg-navy-800/80 border border-white/5 flex items-center gap-1.5">
+              <i class="fa-solid fa-robot text-royal-400"></i> AI Automation
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-navy-800/80 border border-white/5 flex items-center gap-1.5">
+              <i class="fa-solid fa-brain text-royal-400"></i> AI Agents
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-navy-800/80 border border-white/5 flex items-center gap-1.5">
+              <i class="fa-solid fa-database text-royal-400"></i> RAG Systems
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-navy-800/80 border border-white/5 flex items-center gap-1.5">
+              <i class="fa-solid fa-network-wired text-royal-400"></i> Workflow Automation
+            </span>
+            <span class="px-3 py-1.5 rounded-lg bg-navy-800/80 border border-white/5 flex items-center gap-1.5">
+              <i class="fa-solid fa-chart-line text-royal-400"></i> Digital Marketing
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Abstract AI Visualization -->
+        <div class="lg:col-span-5 relative reveal-elem">
+          <div class="relative w-full max-w-lg mx-auto aspect-square rounded-3xl glass-panel p-6 border border-white/10 shadow-2xl flex flex-col justify-between overflow-hidden">
+            
+            <!-- Atmospheric Glow Inside Panel -->
+            <div class="absolute -top-10 -right-10 w-44 h-44 bg-royal-600/30 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-10 -left-10 w-44 h-44 bg-royal-400/20 rounded-full blur-3xl pointer-events-none"></div>
+
+            <!-- Header of AI Architecture Visual -->
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 relative z-10">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="text-xs font-mono font-medium text-slate-300">SYSTEM ARCHITECTURE: ACTIVE</span>
+              </div>
+              <div class="text-[11px] font-mono px-2 py-0.5 rounded bg-royal-950 border border-royal-500/40 text-royal-400">
+                v2.4.0 • AUTONOMOUS
+              </div>
+            </div>
+
+            <!-- Central Network Node Animation Graphics -->
+            <div class="relative my-auto py-6 flex items-center justify-center">
+              
+              <!-- SVG Nodes & Data Pipes -->
+              <svg class="w-full h-48" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Connected Pathways -->
+                <path d="M 50 40 Q 160 40 160 90" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" class="opacity-60" />
+                <path d="M 50 140 Q 160 140 160 90" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 4" class="opacity-60" />
+                <path d="M 160 90 Q 240 90 270 40" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4" class="opacity-80" />
+                <path d="M 160 90 Q 240 90 270 140" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4" class="opacity-80" />
+
+                <!-- Left Inputs -->
+                <g class="float-item">
+                  <circle cx="50" cy="40" r="18" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+                  <text x="50" y="44" fill="#93c5fd" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">DATA</text>
+                </g>
+                <g class="float-item" style="animation-delay: 1s;">
+                  <circle cx="50" cy="140" r="18" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+                  <text x="50" y="144" fill="#93c5fd" font-size="10" font-family="monospace" text-anchor="middle" font-weight="bold">USER</text>
+                </g>
+
+                <!-- Center Core Node (AI Engine) -->
+                <g class="pulse-node">
+                  <circle cx="160" cy="90" r="32" fill="#0f172a" stroke="#2563eb" stroke-width="3" />
+                  <circle cx="160" cy="90" r="24" fill="#1d4ed8" fill-opacity="0.3" />
+                  <text x="160" y="88" fill="#ffffff" font-size="11" font-family="sans-serif" font-weight="bold" text-anchor="middle">AI AGENT</text>
+                  <text x="160" y="100" fill="#60a5fa" font-size="8" font-family="monospace" text-anchor="middle">RAG + LLM</text>
+                </g>
+
+                <!-- Right Outcomes -->
+                <g class="float-item" style="animation-delay: 1.5s;">
+                  <circle cx="270" cy="40" r="18" fill="#1e293b" stroke="#60a5fa" stroke-width="2" />
+                  <text x="270" y="44" fill="#60a5fa" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">ACTION</text>
+                </g>
+                <g class="float-item" style="animation-delay: 2s;">
+                  <circle cx="270" cy="140" r="18" fill="#1e293b" stroke="#60a5fa" stroke-width="2" />
+                  <text x="270" y="144" fill="#60a5fa" font-size="9" font-family="monospace" text-anchor="middle" font-weight="bold">GROWTH</text>
+                </g>
+              </svg>
+
+            </div>
+
+            <!-- Floating Live Status Cards -->
+            <div class="grid grid-cols-2 gap-3 relative z-10">
+              <div class="p-2.5 rounded-xl bg-navy-900/90 border border-white/10 flex items-center gap-2.5">
+                <div class="w-7 h-7 rounded-lg bg-royal-600/20 text-royal-400 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                  <div class="text-[10px] text-slate-400 font-mono">FLOW TRIGGER</div>
+                  <div class="text-xs font-semibold text-white">Event Synchronized</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-navy-900/90 border border-white/10 flex items-center gap-2.5">
+                <div class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xs">
+                  <i class="fa-solid fa-check-double"></i>
+                </div>
+                <div>
+                  <div class="text-[10px] text-slate-400 font-mono">STATUS</div>
+                  <div class="text-xs font-semibold text-white">100% Operational</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. QUICK VALUE STRIP -->
+    <section class="py-6 border-y border-white/10 bg-navy-950/70 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          
+          <!-- Item 1 -->
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 border border-royal-500/30 text-royal-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-microchip text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 uppercase font-mono tracking-wider">AI Automation</div>
+              <div class="text-sm sm:text-base font-bold text-white">Intelligent workflows</div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 border border-royal-500/30 text-royal-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-diagram-project text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 uppercase font-mono tracking-wider">AI Integration</div>
+              <div class="text-sm sm:text-base font-bold text-white">Connected systems</div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 border border-royal-500/30 text-royal-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-arrow-trend-up text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 uppercase font-mono tracking-wider">Digital Growth</div>
+              <div class="text-sm sm:text-base font-bold text-white">Search + paid + social</div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 border border-royal-500/30 text-royal-400 flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-bullseye text-base"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-400 uppercase font-mono tracking-wider">Business Focus</div>
+              <div class="text-sm sm:text-base font-bold text-white">Efficiency + opportunities</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT SECTION -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Content -->
+          <div class="lg:col-span-7 space-y-6 reveal-elem">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+              <i class="fa-solid fa-user-gear"></i> Professional Positioning
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+              Turning AI Into <span class="text-royal-400">Business Advantage</span>
+            </h2>
+
+            <div class="space-y-4 text-slate-300 text-base sm:text-lg leading-relaxed">
+              <p>
+                In today's fast-paced digital landscape, the gap between having raw technology and achieving tangible business results comes down to intelligent integration. As an AI Automation & Integration Specialist with a strong foundation in digital marketing, I bridge that gap.
+              </p>
+              <p>
+                I unite <strong class="text-white">AI automation, intelligent agents, RAG systems, and workflow pipelines</strong> with high-performance <strong class="text-white">websites, SEO, PPC, and digital marketing strategies</strong>. The result is a unified operational ecosystem built to eliminate friction, qualify leads effortlessly, and accelerate sustainable business growth.
+              </p>
+            </div>
+
+            <!-- Pillars List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-slate-300">
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-royal-400"></i>
+                <span>Custom RAG & Knowledge Bases</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-royal-400"></i>
+                <span>n8n, Make & Zapier Pipelines</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-royal-400"></i>
+                <span>Data-Driven Search & PPC Acquisition</span>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-royal-400"></i>
+                <span>Scalable End-to-End Integrations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Visual "How I Think" Card -->
+          <div class="lg:col-span-5 reveal-elem">
+            <div class="glass-card rounded-3xl p-6 sm:p-8 border border-white/10 relative overflow-hidden">
+              <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                  <i class="fa-solid fa-lightbulb text-royal-400"></i>
+                  <span>How I Think</span>
+                </h3>
+                <span class="text-xs font-mono text-royal-400 px-2 py-1 rounded bg-royal-950/80 border border-royal-500/20">SYSTEMATIC LOGIC</span>
+              </div>
+
+              <!-- Stepper Flow -->
+              <div class="space-y-4">
+                
+                <!-- Step 1: Problem -->
+                <div class="p-3.5 rounded-xl bg-navy-900/80 border border-white/5 flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-red-500/20 text-red-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                    01
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-slate-400 uppercase">Problem</div>
+                    <div class="text-sm font-semibold text-white">Identify repetitive or inefficient processes.</div>
+                  </div>
+                </div>
+
+                <div class="flex justify-center text-royal-500 text-sm">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
+
+                <!-- Step 2: Intelligence -->
+                <div class="p-3.5 rounded-xl bg-navy-900/80 border border-white/5 flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-royal-500/20 text-royal-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                    02
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-slate-400 uppercase">Intelligence</div>
+                    <div class="text-sm font-semibold text-white">Apply AI, agents, RAG, or automation.</div>
+                  </div>
+                </div>
+
+                <div class="flex justify-center text-royal-500 text-sm">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
+
+                <!-- Step 3: Integration -->
+                <div class="p-3.5 rounded-xl bg-navy-900/80 border border-white/5 flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                    03
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-slate-400 uppercase">Integration</div>
+                    <div class="text-sm font-semibold text-white">Connect the system with existing tools.</div>
+                  </div>
+                </div>
+
+                <div class="flex justify-center text-royal-500 text-sm">
+                  <i class="fa-solid fa-arrow-down"></i>
+                </div>
+
+                <!-- Step 4: Outcome -->
+                <div class="p-3.5 rounded-xl bg-navy-900/80 border border-royal-500/40 bg-royal-950/40 flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 text-sm font-bold">
+                    04
+                  </div>
+                  <div>
+                    <div class="text-xs font-mono text-emerald-400 uppercase font-semibold">Outcome</div>
+                    <div class="text-sm font-semibold text-white">Improve efficiency, CX, lead handling, or visibility.</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. SKILLS SECTION -->
+    <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950/40 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mb-16 space-y-3 reveal-elem">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+            <i class="fa-solid fa-sliders"></i> Core Capabilities
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            Technical & Marketing Expertise
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            A balanced synthesis of cutting-edge AI architecture and strategic digital acquisition capabilities.
+          </p>
+        </div>
+
+        <!-- Skills Grid with Animated Bars -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Skill 1 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-robot text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">AI Automation & Integration</h3>
+                  <p class="text-xs text-slate-400">Autonomous systems and cross-platform syncing</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">97%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="97"></div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-code-branch text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">AI Agents & Function Calling</h3>
+                  <p class="text-xs text-slate-400">Tool execution, routing, and decision agents</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">96%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="96"></div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-database text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">RAG Systems & Knowledge Bases</h3>
+                  <p class="text-xs text-slate-400">Vector indexing, retrieval, and contextual grounding</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">93%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="93"></div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-diagram-next text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Workflow Automation</h3>
+                  <p class="text-xs text-slate-400">Complex n8n, Make.com, and Zapier orchestration</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">94%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="94"></div>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-magnifying-glass-chart text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">SEO & Local SEO</h3>
+                  <p class="text-xs text-slate-400">Search intent, technical audits, and Google Business Profile</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="90"></div>
+            </div>
+          </div>
+
+          <!-- Skill 6 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-rectangle-ad text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Google Ads / PPC</h3>
+                  <p class="text-xs text-slate-400">Intent-driven search ads and high-converting campaign structures</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">88%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="88"></div>
+            </div>
+          </div>
+
+          <!-- Skill 7 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-share-nodes text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Social Media Marketing</h3>
+                  <p class="text-xs text-slate-400">Content distribution and strategic audience engagement</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">92%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="92"></div>
+            </div>
+          </div>
+
+          <!-- Skill 8 -->
+          <div class="glass-card rounded-2xl p-6 border border-slate-800/80 space-y-3 reveal-elem">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center">
+                  <i class="fa-solid fa-video text-lg"></i>
+                </div>
+                <div>
+                  <h3 class="font-bold text-white text-base">Video Marketing</h3>
+                  <p class="text-xs text-slate-400">Visual storytelling and brand authority building</p>
+                </div>
+              </div>
+              <span class="text-base font-mono font-bold text-blue-400">90%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="90"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Clarity Indicator Disclaimer -->
+        <p class="mt-8 text-center text-xs text-slate-500 font-mono">
+          * Percentages represent self-assessed technical competency and hands-on implementation proficiency.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- 5. TOOLS & TECHNOLOGIES ECOSYSTEM -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3 reveal-elem">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+            <i class="fa-solid fa-cubes"></i> Technology Ecosystem
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Tools & Platforms I Build With
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            Modern, enterprise-ready platforms deployed to construct resilient business infrastructure.
+          </p>
+        </div>
+
+        <!-- Tech Cards Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+            <div class="font-bold text-white text-sm">OpenAI</div>
+            <div class="text-[11px] text-slate-400">AI Integration</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <div class="font-bold text-white text-sm">n8n</div>
+            <div class="text-[11px] text-slate-400">Workflow Automation</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-code-merge"></i>
+            </div>
+            <div class="font-bold text-white text-sm">Make.com</div>
+            <div class="text-[11px] text-slate-400">Multi-App Workflows</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-plug-circle-bolt"></i>
+            </div>
+            <div class="font-bold text-white text-sm">Zapier</div>
+            <div class="text-[11px] text-slate-400">App Connections</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-google"></i>
+            </div>
+            <div class="font-bold text-white text-sm">Google Ads</div>
+            <div class="text-[11px] text-slate-400">Paid Search & PPC</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-map-location-dot"></i>
+            </div>
+            <div class="font-bold text-white text-sm">Google Business</div>
+            <div class="text-[11px] text-slate-400">Local Presence</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <div class="font-bold text-white text-sm">Python</div>
+            <div class="text-[11px] text-slate-400">Automation & Logic</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="font-bold text-white text-sm">HTML5</div>
+            <div class="text-[11px] text-slate-400">Semantic Web</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="font-bold text-white text-sm">CSS3</div>
+            <div class="text-[11px] text-slate-400">Modern Layouts</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="font-bold text-white text-sm">JavaScript</div>
+            <div class="text-[11px] text-slate-400">Interactive Frontend</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="font-bold text-white text-sm">E-Commerce</div>
+            <div class="text-[11px] text-slate-400">Digital Storefronts</div>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 text-center border border-white/5 space-y-2 group reveal-elem">
+            <div class="w-12 h-12 mx-auto rounded-xl bg-navy-900 flex items-center justify-center text-royal-400 text-xl group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <div class="font-bold text-white text-sm">UI/UX Design</div>
+            <div class="text-[11px] text-slate-400">Conversion Focused</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. SERVICES SECTION -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950/40 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="max-w-3xl mb-16 space-y-3 reveal-elem">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+            <i class="fa-solid fa-gears"></i> Solutions Portfolio
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            What I Build
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            High-leverage systems engineered to automate operations, engage target audiences, and generate qualified pipeline.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Service 1 -->
+          <div class="glass-card rounded-3xl p-8 border border-white/5 flex flex-col justify-between reveal-elem">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-mono font-bold text-royal-500">01</span>
+                <div class="w-11 h-11 rounded-2xl bg-royal-600/20 text-royal-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-white">AI Chatbots & RAG Systems</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Custom knowledge bases and intelligent assistants designed to deliver business-specific responses.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <div class="text-[11px] font-mono text-slate-400 uppercase mb-1">Key Outcome:</div>
+              <div class="text-xs font-semibold text-royal-300">
+                Faster support • Consistent answers • Reduced repetitive work
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="glass-card rounded-3xl p-8 border border-white/5 flex flex-col justify-between reveal-elem">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-mono font-bold text-royal-500">02</span>
+                <div class="w-11 h-11 rounded-2xl bg-royal-600/20 text-royal-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-user-astronaut"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-white">AI Agents & Function Calling</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Task-oriented AI systems capable of interacting with tools and executing business actions.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <div class="text-[11px] font-mono text-slate-400 uppercase mb-1">Key Outcome:</div>
+              <div class="text-xs font-semibold text-royal-300">
+                Intelligent workflows • Automated actions • Better scalability
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="glass-card rounded-3xl p-8 border border-white/5 flex flex-col justify-between reveal-elem">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-mono font-bold text-royal-500">03</span>
+                <div class="w-11 h-11 rounded-2xl bg-royal-600/20 text-royal-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-white">Workflow Automation</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Connect apps, APIs, AI models, and business systems using n8n, Make.com, and Zapier.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <div class="text-[11px] font-mono text-slate-400 uppercase mb-1">Key Outcome:</div>
+              <div class="text-xs font-semibold text-royal-300">
+                Less manual work • Fewer repetitive tasks • Connected operations
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="glass-card rounded-3xl p-8 border border-white/5 flex flex-col justify-between reveal-elem">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-mono font-bold text-royal-500">04</span>
+                <div class="w-11 h-11 rounded-2xl bg-royal-600/20 text-royal-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-white">AI-Powered Web Development</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Modern, responsive websites and digital experiences built with AI-assisted development workflows.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <div class="text-[11px] font-mono text-slate-400 uppercase mb-1">Key Outcome:</div>
+              <div class="text-xs font-semibold text-royal-300">
+                Professional presence • Better UX • Stronger digital foundation
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="glass-card rounded-3xl p-8 border border-white/5 flex flex-col justify-between reveal-elem">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-mono font-bold text-royal-500">05</span>
+                <div class="w-11 h-11 rounded-2xl bg-royal-600/20 text-royal-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-bullhorn"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-white">Google Ads / PPC</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Search advertising strategies designed around customer intent and business objectives.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <div class="text-[11px] font-mono text-slate-400 uppercase mb-1">Key Outcome:</div>
+              <div class="text-xs font-semibold text-royal-300">
+                Targeted traffic • Lead opportunities • Measurable campaigns
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="glass-card rounded-3xl p-8 border border-white/5 flex flex-col justify-between reveal-elem">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-mono font-bold text-royal-500">06</span>
+                <div class="w-11 h-11 rounded-2xl bg-royal-600/20 text-royal-400 flex items-center justify-center text-lg">
+                  <i class="fa-solid fa-eye"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-white">Brand Visibility & Engagement</h3>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Social media and video marketing strategies designed to strengthen digital presence.
+              </p>
+            </div>
+            <div class="pt-6 mt-6 border-t border-white/5">
+              <div class="text-[11px] font-mono text-slate-400 uppercase mb-1">Key Outcome:</div>
+              <div class="text-xs font-semibold text-royal-300">
+                Greater visibility • Audience engagement • Brand awareness
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. BUSINESS OUTCOMES SECTION -->
+    <section id="outcomes" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="max-w-3xl mb-16 space-y-4 reveal-elem">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+            <i class="fa-solid fa-chart-pie"></i> Strategic Impact
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+            Technology That Creates Business Value
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg italic border-l-2 border-royal-500 pl-4">
+            “The goal isn't automation for the sake of automation. It's using technology to create better business outcomes.”
+          </p>
+        </div>
+
+        <!-- 2x3 Grid of Outcomes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3 reveal-elem">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-base font-bold">
+              ⚡
+            </div>
+            <h3 class="text-lg font-bold text-white">Automate Repetitive Work</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Turn repetitive manual processes into intelligent workflows to free up valuable human resources.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3 reveal-elem">
+            <div class="w-10 h-10 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-base font-bold">
+              🎯
+            </div>
+            <h3 class="text-lg font-bold text-white">Generate & Qualify Leads</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Use automation and AI to capture, organize, and qualify opportunities 24/7 without delays.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3 reveal-elem">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-base font-bold">
+              🤝
+            </div>
+            <h3 class="text-lg font-bold text-white">Improve Customer Experience</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Deliver faster, consistent, and context-aware interactions that build trust with your prospects.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3 reveal-elem">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-base font-bold">
+              📅
+            </div>
+            <h3 class="text-lg font-bold text-white">Streamline Appointments</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Reduce manual scheduling and coordination with automated booking flows synced to calendars.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3 reveal-elem">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-base font-bold">
+              🔎
+            </div>
+            <h3 class="text-lg font-bold text-white">Increase Online Visibility</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Combine SEO, Local SEO, Google Business Profile, PPC, and social strategies to capture market demand.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-3 reveal-elem">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-base font-bold">
+              📈
+            </div>
+            <h3 class="text-lg font-bold text-white">Support Scalable Growth</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Build systems that can grow with the business rather than adding unnecessary manual workload.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. FEATURED PROJECTS -->
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950/40 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal-elem">
+          <div class="max-w-3xl space-y-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+              <i class="fa-solid fa-diagram-project"></i> Portfolio Showcase
+            </div>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+              Featured Projects
+            </h2>
+            <p class="text-slate-400 text-base sm:text-lg">
+              Practical demonstrations of intelligent agents, multi-platform integrations, and digital growth engines.
+            </p>
+          </div>
+
+          <div class="shrink-0 flex items-center gap-3">
+            <button type="button" onclick="openAdminPortal('projects')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 hover:text-white border border-slate-700/70 text-xs font-semibold transition-all">
+              <i class="fa-solid fa-cloud-arrow-up text-blue-400"></i>
+              <span>Manage / Upload Projects</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Projects Container -->
+        <div id="projects-container" class="space-y-10">
+          <!-- Dynamic Project Cards rendered here via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. PROCESS SECTION -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3 reveal-elem">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+            <i class="fa-solid fa-list-check"></i> Methodology
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            How I Work
+          </h2>
+          <p class="text-slate-400 text-sm sm:text-base">
+            A structured, repeatable five-stage framework delivering precision results from audit to launch.
+          </p>
+        </div>
+
+        <!-- Horizontal on Desktop / Vertical on Mobile Timeline -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+          
+          <!-- Step 01 -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative reveal-elem space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 text-royal-400 font-mono font-bold flex items-center justify-center text-sm">
+              01
+            </div>
+            <h3 class="font-bold text-white text-lg">Discover</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Understand the business, target audience, existing workflows, and friction points.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative reveal-elem space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 text-royal-400 font-mono font-bold flex items-center justify-center text-sm">
+              02
+            </div>
+            <h3 class="font-bold text-white text-lg">Strategize</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Identify where AI, automation, or digital marketing can create the highest direct value.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative reveal-elem space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 text-royal-400 font-mono font-bold flex items-center justify-center text-sm">
+              03
+            </div>
+            <h3 class="font-bold text-white text-lg">Build</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Develop the custom system, workflow, website, campaign, or AI architecture.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative reveal-elem space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 text-royal-400 font-mono font-bold flex items-center justify-center text-sm">
+              04
+            </div>
+            <h3 class="font-bold text-white text-lg">Integrate</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Connect the solution securely with existing tools, databases, and operational processes.
+            </p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="glass-card rounded-2xl p-6 border border-white/5 relative reveal-elem space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-royal-600/20 text-royal-400 font-mono font-bold flex items-center justify-center text-sm">
+              05
+            </div>
+            <h3 class="font-bold text-white text-lg">Optimize</h3>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              Review performance metrics and continuously refine and enhance the system.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. EDUCATION, CERTIFICATIONS & LANGUAGES -->
+    <section class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-950/40 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          
+          <!-- Left: Education & Certifications (Col 8) -->
+          <div class="lg:col-span-8 space-y-8 reveal-elem">
+            
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold mb-3">
+                <i class="fa-solid fa-graduation-cap"></i> Academic & Professional
+              </div>
+              <h2 class="text-3xl font-bold text-white tracking-tight">
+                Education & Certifications
+              </h2>
+            </div>
+
+            <!-- Education Card -->
+            <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-2">
+              <div class="flex items-center justify-between">
+                <h3 class="font-bold text-white text-lg">Secondary School Education — Lahore</h3>
+                <span class="text-xs font-mono text-royal-400 px-2.5 py-1 rounded bg-royal-950 border border-royal-500/30">Foundations</span>
+              </div>
+              <p class="text-sm text-slate-300 font-medium">Focus: AI & Digital Marketing Foundations</p>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div>
+              <h3 class="text-sm font-mono text-slate-400 uppercase tracking-wider mb-4 font-semibold">
+                Industry Certifications
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="glass-card rounded-2xl p-5 border border-white/5 space-y-1.5">
+                  <div class="text-xs font-mono text-royal-400 font-semibold">Google AI Studio • 2024</div>
+                  <h4 class="font-bold text-white text-base">AI & Chatbot Development</h4>
+                  <p class="text-xs text-slate-400">Prompt engineering, function calling & AI agent orchestration</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 border border-white/5 space-y-1.5">
+                  <div class="text-xs font-mono text-royal-400 font-semibold">n8n.io • 2024</div>
+                  <h4 class="font-bold text-white text-base">n8n Workflow Automation</h4>
+                  <p class="text-xs text-slate-400">Advanced webhook integration, error handling & multi-step nodes</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 border border-white/5 space-y-1.5">
+                  <div class="text-xs font-mono text-royal-400 font-semibold">Google • 2024</div>
+                  <h4 class="font-bold text-white text-base">Google Ads Search Certification</h4>
+                  <p class="text-xs text-slate-400">Search campaign management, bid strategies & intent modeling</p>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 border border-white/5 space-y-1.5">
+                  <div class="text-xs font-mono text-royal-400 font-semibold">Coursera • 2024</div>
+                  <h4 class="font-bold text-white text-base">UI/UX Design Fundamentals</h4>
+                  <p class="text-xs text-slate-400">User experience research, wireframing & responsive design</p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Languages (Col 4) -->
+          <div class="lg:col-span-4 space-y-6 reveal-elem">
+            
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold mb-3">
+                <i class="fa-solid fa-language"></i> Communication
+              </div>
+              <h2 class="text-3xl font-bold text-white tracking-tight">
+                Languages
+              </h2>
+            </div>
+
+            <div class="glass-card rounded-2xl p-6 border border-white/5 space-y-6">
+              
+              <!-- English -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-white text-base">English</span>
+                  <span class="text-sm font-mono font-bold text-royal-400">100%</span>
+                </div>
+                <div class="text-xs text-slate-400">Professional Proficiency</div>
+                <div class="w-full bg-navy-900 rounded-full h-2 overflow-hidden">
+                  <div class="bg-royal-500 h-full rounded-full" style="width: 100%;"></div>
+                </div>
+              </div>
+
+              <!-- Urdu -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="font-bold text-white text-base">Urdu</span>
+                  <span class="text-sm font-mono font-bold text-royal-400">96%</span>
+                </div>
+                <div class="text-xs text-slate-400">Fluent (Native/Bilingual)</div>
+                <div class="w-full bg-navy-900 rounded-full h-2 overflow-hidden">
+                  <div class="bg-royal-500 h-full rounded-full" style="width: 96%;"></div>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-white/5 text-[11px] text-slate-500 font-mono">
+                * Indicative self-assessed linguistic proficiency for international business collaboration.
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. CONTACT / CTA SECTION -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="glass-panel rounded-3xl p-8 sm:p-12 lg:p-16 border border-white/10 shadow-2xl relative overflow-hidden reveal-elem">
+          
+          <!-- Background Glow Effect -->
+          <div class="absolute top-0 right-0 w-96 h-96 bg-royal-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+            
+            <!-- Left Contact Info -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-royal-950 border border-royal-500/30 text-royal-400 text-xs font-mono uppercase font-semibold">
+                <i class="fa-solid fa-paper-plane"></i> Initiate Collaboration
+              </div>
+
+              <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+                Have a Process Worth <span class="text-royal-400">Automating?</span>
+              </h2>
+
+              <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                Let's turn repetitive work, disconnected systems, and digital growth challenges into smarter, scalable solutions.
+              </p>
+
+              <!-- Direct Contact Information List -->
+              <div class="space-y-4 pt-2">
+                <a href="mailto:guzailfaisal@gmail.com" class="flex items-center gap-3.5 text-slate-300 hover:text-white group transition-colors">
+                  <div class="w-10 h-10 rounded-xl bg-navy-800 border border-white/10 text-royal-400 flex items-center justify-center group-hover:bg-royal-600 group-hover:text-white transition-all">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-mono text-slate-400 uppercase">Direct Email</div>
+                    <div class="text-sm font-semibold">guzailfaisal@gmail.com</div>
+                  </div>
+                </a>
+
+                <div class="flex items-center gap-3.5 text-slate-300">
+                  <div class="w-10 h-10 rounded-xl bg-navy-800 border border-white/10 text-royal-400 flex items-center justify-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-mono text-slate-400 uppercase">Location</div>
+                    <div class="text-sm font-semibold">Lahore, Pakistan</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Interactive Contact Form -->
+            <div class="lg:col-span-6">
+              <form id="contact-form" onsubmit="handleContactSubmit(event)" class="glass-card rounded-2xl p-6 sm:p-8 border border-white/10 space-y-4">
+                
+                <div class="flex items-center justify-between">
+                  <div class="text-xs font-mono text-royal-400 uppercase font-semibold">Quick Inquiry & Booking Form</div>
+                  <span class="text-[11px] text-slate-400 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Instant Direct Submission
+                  </span>
+                </div>
+
+                <div>
+                  <label for="contact-name" class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+                  <input type="text" id="contact-name" required placeholder="John Doe" class="w-full px-4 py-2.5 rounded-xl bg-navy-900/90 border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 focus:border-transparent transition-all placeholder:text-slate-600" />
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-medium text-slate-300 mb-1">Your Email</label>
+                  <input type="email" id="contact-email" required placeholder="john@example.com" class="w-full px-4 py-2.5 rounded-xl bg-navy-900/90 border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 focus:border-transparent transition-all placeholder:text-slate-600" />
+                </div>
+
+                <div>
+                  <label for="contact-interest" class="block text-xs font-medium text-slate-300 mb-1">Area of Interest</label>
+                  <select id="contact-interest" class="w-full px-4 py-2.5 rounded-xl bg-navy-900/90 border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 focus:border-transparent transition-all">
+                    <option value="AI Automation & Agents">AI Automation & Agents</option>
+                    <option value="RAG / Chatbot Systems">RAG / Chatbot Systems</option>
+                    <option value="Workflow Pipelines (n8n/Make)">Workflow Pipelines (n8n/Make)</option>
+                    <option value="Web Development & UX">Web Development & UX</option>
+                    <option value="SEO & PPC Acquisition">SEO & PPC Acquisition</option>
+                    <option value="General Consultation">General Consultation</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-medium text-slate-300 mb-1">Project Details or Problem</label>
+                  <textarea id="contact-message" rows="3" required placeholder="Tell me about the workflow you'd like to automate or the growth goal you want to achieve..." class="w-full px-4 py-2.5 rounded-xl bg-navy-900/90 border border-white/10 text-white text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 focus:border-transparent transition-all placeholder:text-slate-600 resize-none"></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="w-full inline-flex items-center justify-center gap-2 bg-royal-600 hover:bg-royal-500 text-white text-sm font-bold py-3.5 px-6 rounded-xl transition-all duration-200 shadow-glow-sm hover:shadow-glow-md focus:outline-none focus:ring-2 focus:ring-royal-400">
+                  <span>Send Message & Book Consultation →</span>
+                </button>
+
+                <div id="form-feedback" class="hidden text-center text-xs font-medium p-3 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                  <i class="fa-solid fa-circle-check mr-1"></i> Thank you! Your booking inquiry has been recorded and submitted.
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-navy-950 relative z-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      
+      <!-- Brand & Info -->
+      <div class="space-y-1">
+        <div class="flex items-center justify-center md:justify-start gap-2">
+          <div class="w-6 h-6 rounded bg-royal-600 flex items-center justify-center text-white text-xs font-bold">G</div>
+          <span class="font-bold text-lg text-white">GUZAIL</span>
+        </div>
+        <p class="text-xs text-slate-400">
+          AI Automation & Integration Specialist | Digital Marketing
+        </p>
+        <p class="text-xs text-slate-500">
+          Building intelligent systems and digital strategies for smarter business growth.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#outcomes" class="hover:text-white transition-colors">Outcomes</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        <button type="button" onclick="openAdminPortal()" class="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1.5">
+          <i class="fa-solid fa-lock text-[10px]"></i> Admin Panel
+        </button>
+      </div>
+
+      <!-- Copyright -->
+      <div class="space-y-2 text-center md:text-right">
+        <div class="text-[11px] text-slate-500 font-mono">
+          © 2026 GUZAIL. All rights reserved.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- CASE STUDY MODAL -->
+  <div id="case-study-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy-950/85 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="glass-panel rounded-3xl max-w-2xl w-full p-6 sm:p-8 border border-white/15 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button onclick="closeCaseStudyModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-navy-800 text-slate-300 hover:text-white hover:bg-navy-700 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-royal-500" aria-label="Close Case Study Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modal-content" class="space-y-6">
+        <!-- Content injected dynamically -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ADMIN PANEL MODAL (Password: guzail123) -->
+  <div id="admin-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-6 bg-navy-950/90 backdrop-blur-lg" role="dialog" aria-modal="true" aria-labelledby="admin-title">
+    
+    <!-- Login Gate View -->
+    <div id="admin-login-view" class="glass-panel rounded-3xl max-w-md w-full p-8 border border-white/20 shadow-2xl relative space-y-6">
+      <button onclick="closeAdminPortal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-navy-800 text-slate-300 hover:text-white hover:bg-navy-700 flex items-center justify-center focus:outline-none" aria-label="Close Admin Portal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center space-y-2">
+        <div class="w-14 h-14 rounded-2xl bg-royal-600/20 border border-royal-500/40 text-royal-400 flex items-center justify-center mx-auto text-xl shadow-glow-sm">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 id="admin-title" class="text-2xl font-bold text-white">GUZAIL Admin Portal</h3>
+        <p class="text-xs text-slate-400">Enter master administrator password to manage bookings and showcase projects.</p>
+      </div>
+
+      <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+        <div>
+          <label for="admin-password" class="block text-xs font-mono uppercase font-semibold text-slate-300 mb-1.5">Master Password</label>
+          <div class="relative">
+            <input type="password" id="admin-password" required placeholder="Enter password (guzail123)" class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-white/15 text-white text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 pr-10" />
+            <button type="button" onclick="togglePasswordVisibility()" class="absolute right-3 top-3.5 text-slate-400 hover:text-white text-xs">
+              <i id="password-eye-icon" class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="admin-login-error" class="hidden text-xs text-red-400 bg-red-950/40 border border-red-500/30 p-2.5 rounded-lg flex items-center gap-2">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>Incorrect password. Please try again.</span>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-royal-600 hover:bg-royal-500 text-white font-semibold rounded-xl text-sm transition-all shadow-glow-sm hover:shadow-glow-md flex items-center justify-center gap-2">
+          <i class="fa-solid fa-lock-open text-xs"></i>
+          <span>Unlock Admin Dashboard</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Authenticated Dashboard View -->
+    <div id="admin-dashboard-view" class="hidden glass-panel rounded-3xl max-w-5xl w-full p-6 sm:p-8 border border-white/20 shadow-2xl relative max-h-[92vh] flex flex-col">
+      
+      <!-- Admin Header -->
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-5 border-b border-white/10 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-royal-600 flex items-center justify-center text-white font-bold text-base shadow-glow-sm">
+            G
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-lg sm:text-xl font-bold text-white">GUZAIL Admin Control Center</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">ACTIVE SESSION</span>
+            </div>
+            <p class="text-xs text-slate-400">Manage contact bookings, add & upload showcase projects, or clear website items.</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 self-end sm:self-auto">
+          <button type="button" onclick="closeAdminPortal()" class="px-3 py-1.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 hover:text-white border border-white/10 text-xs font-semibold flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-eye text-xs"></i>
+            <span>View Website</span>
+          </button>
+          <button type="button" onclick="logoutAdmin()" class="px-3 py-1.5 rounded-xl bg-red-950/50 hover:bg-red-900/60 text-red-300 border border-red-500/30 text-xs font-semibold flex items-center gap-1.5 transition-all">
+            <i class="fa-solid fa-arrow-right-from-bracket text-xs"></i>
+            <span>Logout</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="flex items-center gap-2 pt-4 pb-4 border-b border-white/10 shrink-0">
+        <button type="button" id="tab-btn-bookings" onclick="switchAdminTab('bookings')" class="admin-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all bg-royal-600 text-white shadow-glow-sm">
+          <i class="fa-solid fa-inbox text-xs"></i>
+          <span>Contact Bookings & Inquiries</span>
+          <span id="tab-inquiries-count" class="px-1.5 py-0.5 rounded-full bg-white/20 text-[10px] font-mono">0</span>
+        </button>
+        <button type="button" id="tab-btn-projects" onclick="switchAdminTab('projects')" class="admin-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all bg-navy-800 text-slate-400 hover:text-white hover:bg-navy-700 border border-white/5">
+          <i class="fa-solid fa-diagram-project text-xs"></i>
+          <span>Upload & Manage Projects</span>
+          <span id="tab-projects-count" class="px-1.5 py-0.5 rounded-full bg-white/10 text-[10px] font-mono">0</span>
+        </button>
+      </div>
+
+      <!-- Tab Content 1: Bookings & Inquiries -->
+      <div id="admin-tab-bookings" class="admin-tab-pane py-4 space-y-4 overflow-y-auto flex-1 pr-1">
+        
+        <!-- Action Toolbar -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-navy-900/80 p-3 rounded-2xl border border-white/10">
+          <div class="flex items-center gap-2 flex-1">
+            <div class="relative flex-1 max-w-xs">
+              <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+              <input type="text" id="inquiry-search" oninput="renderAdminInquiries()" placeholder="Search bookings..." class="w-full pl-8 pr-3 py-1.5 bg-navy-950 border border-white/10 rounded-xl text-xs text-white placeholder:text-slate-600 focus:outline-none focus:ring-1 focus:ring-royal-500" />
+            </div>
+            <select id="inquiry-filter-status" onchange="renderAdminInquiries()" class="bg-navy-950 border border-white/10 rounded-xl text-xs text-slate-300 px-3 py-1.5 focus:outline-none">
+              <option value="ALL">All Statuses</option>
+              <option value="New">New Only</option>
+              <option value="Contacted">Contacted</option>
+              <option value="Archived">Archived</option>
+            </select>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button type="button" onclick="generateSampleInquiry()" class="px-3 py-1.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 text-xs font-semibold border border-white/10 flex items-center gap-1.5">
+              <i class="fa-solid fa-plus text-xs text-blue-400"></i>
+              <span>+ Sample Inquiry</span>
+            </button>
+            <button type="button" onclick="exportInquiriesCSV()" class="px-3 py-1.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 text-xs font-semibold border border-white/10 flex items-center gap-1.5">
+              <i class="fa-solid fa-file-csv text-xs text-emerald-400"></i>
+              <span>Export CSV</span>
+            </button>
+            <button type="button" onclick="clearAllInquiries()" class="px-3 py-1.5 rounded-xl bg-red-950/40 hover:bg-red-900/50 text-red-300 text-xs font-semibold border border-red-500/30 flex items-center gap-1.5">
+              <i class="fa-solid fa-trash-can text-xs"></i>
+              <span>Clear All</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Inquiries Stream Container -->
+        <div id="inquiries-list" class="space-y-3">
+          <!-- Rendered dynamically -->
+        </div>
+
+      </div>
+
+      <!-- Tab Content 2: Upload & Manage Projects -->
+      <div id="admin-tab-projects" class="admin-tab-pane hidden py-4 space-y-6 overflow-y-auto flex-1 pr-1">
+        
+        <!-- Form to Add/Upload a Project -->
+        <div class="bg-navy-900/90 rounded-2xl p-5 sm:p-6 border border-white/10 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/10 pb-3">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-lg bg-royal-600/20 text-royal-400 flex items-center justify-center text-sm">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+              </span>
+              <div>
+                <h4 id="project-form-title" class="text-sm font-bold text-white">Upload New Project</h4>
+                <p class="text-[11px] text-slate-400">Add project title, short description, screenshot/image, and optional website link.</p>
+              </div>
+            </div>
+            <button type="button" onclick="resetProjectForm()" class="text-xs text-slate-400 hover:text-white px-2.5 py-1 rounded-lg bg-navy-950 border border-white/10">
+              <i class="fa-solid fa-rotate-left mr-1"></i> Reset Form
+            </button>
+          </div>
+
+          <form id="project-upload-form" onsubmit="saveProjectForm(event)" class="space-y-4">
+            <input type="hidden" id="project-edit-id" value="" />
+
+            <!-- Project Title -->
+            <div>
+              <label for="proj-title" class="block text-xs font-semibold text-slate-200 mb-1">
+                Project Title <span class="text-royal-400">*</span>
+              </label>
+              <input type="text" id="proj-title" required placeholder="e.g. AI Customer Support Agent / Brand Storefront" class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/15 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 placeholder:text-slate-600" />
+            </div>
+
+            <!-- Short Description -->
+            <div>
+              <label for="proj-summary" class="block text-xs font-semibold text-slate-200 mb-1">
+                Short Description <span class="text-royal-400">*</span>
+              </label>
+              <textarea id="proj-summary" rows="3" required placeholder="Brief description of the project, key features, and what was achieved..." class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/15 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 resize-none placeholder:text-slate-600 leading-relaxed"></textarea>
+            </div>
+
+            <!-- Image Upload & Optional Website Link -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Image Upload -->
+              <div class="space-y-2">
+                <label class="block text-xs font-semibold text-slate-200">
+                  Project Image / Screenshot <span class="text-slate-400 font-normal">(Recommended)</span>
+                </label>
+                
+                <div id="drop-zone" onclick="document.getElementById('proj-image-file').click()" class="border-2 border-dashed border-white/15 hover:border-royal-500/50 bg-navy-950/70 hover:bg-navy-950 rounded-2xl p-4 text-center cursor-pointer transition-all duration-200 group">
+                  <input type="file" id="proj-image-file" accept="image/*" onchange="previewUploadedImage(event)" class="hidden" />
+                  <input type="hidden" id="proj-image-data" value="" />
+                  
+                  <div class="space-y-1.5">
+                    <div class="w-9 h-9 rounded-xl bg-navy-800 group-hover:bg-royal-600/30 text-slate-400 group-hover:text-royal-300 flex items-center justify-center mx-auto transition-colors">
+                      <i class="fa-solid fa-image text-sm"></i>
+                    </div>
+                    <div class="text-xs font-medium text-slate-300 group-hover:text-white">
+                      Click to choose image <span class="text-slate-500">or drag & drop</span>
+                    </div>
+                    <div class="text-[10px] text-slate-500 font-mono">PNG, JPG, WebP, GIF</div>
+                  </div>
+                </div>
+
+                <!-- Attached Preview Box -->
+                <div id="image-preview-box" class="hidden flex items-center gap-3 p-2 bg-navy-950 rounded-xl border border-white/15">
+                  <img id="image-preview-img" src="" alt="Preview" class="w-12 h-12 object-cover rounded-lg border border-white/10" />
+                  <div class="flex-1 min-w-0">
+                    <div class="text-xs font-semibold text-white truncate" id="image-preview-name">Image Attached</div>
+                    <div class="text-[10px] text-emerald-400 flex items-center gap-1">
+                      <i class="fa-solid fa-circle-check"></i> Ready to publish
+                    </div>
+                  </div>
+                  <button type="button" onclick="clearAttachedImage()" class="px-2 py-1 text-xs text-red-400 hover:text-red-300 rounded bg-red-950/40 border border-red-500/30 transition-colors" title="Remove image">
+                    <i class="fa-solid fa-trash-can"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Website Link (Optional) -->
+              <div class="space-y-2 flex flex-col justify-between">
+                <div>
+                  <label for="proj-website-link" class="block text-xs font-semibold text-slate-200 mb-1">
+                    Link of Website <span class="text-slate-400 font-normal">[Optional]</span>
+                  </label>
+                  <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
+                      <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <input type="url" id="proj-website-link" placeholder="https://example.com or client-project.com" class="w-full pl-9 pr-3.5 py-2.5 rounded-xl bg-navy-950 border border-white/15 text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-royal-500 placeholder:text-slate-600" />
+                  </div>
+                  <p class="text-[11px] text-slate-400 mt-1.5 leading-normal">
+                    If provided, a direct <strong class="text-slate-300">"Visit Website ↗"</strong> live button will be included on the project card.
+                  </p>
+                </div>
+
+                <div class="pt-2">
+                  <button type="submit" id="proj-save-btn" class="w-full py-3 rounded-xl bg-royal-600 hover:bg-royal-500 text-white text-xs sm:text-sm font-bold transition-all duration-200 shadow-glow-sm hover:shadow-glow-md flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-check"></i>
+                    <span id="proj-save-btn-text">Publish Project to Website</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Uploaded Projects Management List -->
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <h4 class="text-sm font-bold text-white">Live Portfolio Projects</h4>
+              <span id="admin-projects-counter" class="px-2 py-0.5 rounded text-[10px] font-mono bg-royal-950 border border-royal-500/30 text-royal-400">0 published</span>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="removeAllProjects()" class="px-3 py-1.5 rounded-xl bg-red-950/50 hover:bg-red-900/60 text-red-300 text-xs font-semibold border border-red-500/40 flex items-center gap-1.5 transition-all" title="Remove all projects from the website">
+                <i class="fa-solid fa-trash-can text-xs"></i>
+                <span>Remove All Projects from Website</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="admin-projects-list" class="space-y-3">
+            <!-- List of existing projects rendered here -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // ==========================================
+    // 1. DATA STATE & LOCAL STORAGE INITIALIZATION
+    // ==========================================
+    const ADMIN_PASSWORD = "guzail123";
+
+    // Initial Default Data (If user has never modified before)
+    const initialProjects = []; // Starts clean per user request: "remove all the projects from the website"
+
+    // Load or initialize projects from localStorage
+    function getStoredProjects() {
+      try {
+        const stored = localStorage.getItem('guzail_projects');
+        if (stored !== null) {
+          return JSON.parse(stored);
+        }
+      } catch (e) {
+        console.error("Failed to parse stored projects", e);
+      }
+      return [];
+    }
+
+    function saveStoredProjects(projects) {
+      localStorage.setItem('guzail_projects', JSON.stringify(projects));
+      renderPublicProjects();
+      renderAdminProjects();
+    }
+
+    // Load or initialize inquiries from localStorage
+    function getStoredInquiries() {
+      try {
+        const stored = localStorage.getItem('guzail_inquiries');
+        if (stored !== null) {
+          return JSON.parse(stored);
+        }
+      } catch (e) {
+        console.error("Failed to parse stored inquiries", e);
+      }
+      return [];
+    }
+
+    function saveStoredInquiries(inquiries) {
+      localStorage.setItem('guzail_inquiries', JSON.stringify(inquiries));
+      renderAdminInquiries();
+      updateInquiriesBadges();
+    }
+
+    // ==========================================
+    // 2. ADMIN AUTHENTICATION & MODAL CONTROLS
+    // ==========================================
+    function isAdminAuthenticated() {
+      return sessionStorage.getItem('guzail_admin_auth') === 'true';
+    }
+
+    function openAdminPortal(targetTab) {
+      const modal = document.getElementById('admin-modal');
+      const loginView = document.getElementById('admin-login-view');
+      const dashboardView = document.getElementById('admin-dashboard-view');
+      const errorMsg = document.getElementById('admin-login-error');
+
+      errorMsg.classList.add('hidden');
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+
+      if (isAdminAuthenticated()) {
+        loginView.classList.add('hidden');
+        dashboardView.classList.remove('hidden');
+        if (targetTab === 'projects') {
+          switchAdminTab('projects');
+        } else {
+          switchAdminTab('bookings');
+        }
+        renderAdminInquiries();
+        renderAdminProjects();
+      } else {
+        loginView.classList.remove('hidden');
+        dashboardView.classList.add('hidden');
+        document.getElementById('admin-password').value = '';
+        setTimeout(() => document.getElementById('admin-password').focus(), 100);
+      }
+    }
+
+    function closeAdminPortal() {
+      const modal = document.getElementById('admin-modal');
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const pwd = document.getElementById('admin-password').value;
+      const errorMsg = document.getElementById('admin-login-error');
+      const loginView = document.getElementById('admin-login-view');
+      const dashboardView = document.getElementById('admin-dashboard-view');
+
+      if (pwd === ADMIN_PASSWORD) {
+        sessionStorage.setItem('guzail_admin_auth', 'true');
+        errorMsg.classList.add('hidden');
+        loginView.classList.add('hidden');
+        dashboardView.classList.remove('hidden');
+        switchAdminTab('bookings');
+        renderAdminInquiries();
+        renderAdminProjects();
+      } else {
+        errorMsg.classList.remove('hidden');
+        document.getElementById('admin-password').focus();
+      }
+    }
+
+    function logoutAdmin() {
+      sessionStorage.removeItem('guzail_admin_auth');
+      const loginView = document.getElementById('admin-login-view');
+      const dashboardView = document.getElementById('admin-dashboard-view');
+      dashboardView.classList.add('hidden');
+      loginView.classList.remove('hidden');
+      document.getElementById('admin-password').value = '';
+    }
+
+    function togglePasswordVisibility() {
+      const input = document.getElementById('admin-password');
+      const icon = document.getElementById('password-eye-icon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.remove('fa-eye');
+        icon.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        icon.classList.remove('fa-eye-slash');
+        icon.classList.add('fa-eye');
+      }
+    }
+
+    function switchAdminTab(tabName) {
+      const bookingsTab = document.getElementById('admin-tab-bookings');
+      const projectsTab = document.getElementById('admin-tab-projects');
+      const bookingsBtn = document.getElementById('tab-btn-bookings');
+      const projectsBtn = document.getElementById('tab-btn-projects');
+
+      if (tabName === 'bookings') {
+        bookingsTab.classList.remove('hidden');
+        projectsTab.classList.add('hidden');
+
+        bookingsBtn.className = 'admin-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all bg-royal-600 text-white shadow-glow-sm';
+        projectsBtn.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all bg-navy-800 text-slate-400 hover:text-white hover:bg-navy-700 border border-white/5';
+        renderAdminInquiries();
+      } else {
+        bookingsTab.classList.add('hidden');
+        projectsTab.classList.remove('hidden');
+
+        projectsBtn.className = 'admin-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all bg-royal-600 text-white shadow-glow-sm';
+        bookingsBtn.className = 'admin-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all bg-navy-800 text-slate-400 hover:text-white hover:bg-navy-700 border border-white/5';
+        renderAdminProjects();
+      }
+    }
+
+    // ==========================================
+    // 3. CONTACT BOOKINGS MANAGEMENT
+    // ==========================================
+    function updateInquiriesBadges() {
+      const inquiries = getStoredInquiries();
+      const newCount = inquiries.filter(i => i.status === 'New').length;
+
+      const navBadge = document.getElementById('nav-inquiries-badge');
+      const tabCount = document.getElementById('tab-inquiries-count');
+
+      if (navBadge) {
+        if (newCount > 0) {
+          navBadge.classList.remove('hidden');
+        } else {
+          navBadge.classList.add('hidden');
+        }
+      }
+
+      if (tabCount) {
+        tabCount.innerText = inquiries.length;
+      }
+    }
+
+    function renderAdminInquiries() {
+      const inquiries = getStoredInquiries();
+      const container = document.getElementById('inquiries-list');
+      const search = (document.getElementById('inquiry-search')?.value || '').toLowerCase().trim();
+      const filterStatus = document.getElementById('inquiry-filter-status')?.value || 'ALL';
+
+      let filtered = inquiries.filter(item => {
+        const matchesSearch = !search || 
+          item.name.toLowerCase().includes(search) || 
+          item.email.toLowerCase().includes(search) || 
+          item.message.toLowerCase().includes(search) ||
+          item.interest.toLowerCase().includes(search);
+
+        const matchesStatus = filterStatus === 'ALL' || item.status === filterStatus;
+        return matchesSearch && matchesStatus;
+      });
+
+      updateInquiriesBadges();
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 px-4 rounded-2xl bg-navy-950/60 border border-dashed border-white/10 space-y-3">
+            <div class="w-12 h-12 rounded-full bg-navy-800 text-slate-500 flex items-center justify-center mx-auto text-lg">
+              <i class="fa-solid fa-inbox"></i>
+            </div>
+            <div class="text-sm font-semibold text-white">No Contact Inquiries Found</div>
+            <p class="text-xs text-slate-400 max-w-sm mx-auto">
+              ${search || filterStatus !== 'ALL' ? 'No inquiries matched your filter criteria.' : 'When clients book a consultation or send a message, inquiries appear here in real-time.'}
+            </p>
+            ${!search && filterStatus === 'ALL' ? `
+              <button type="button" onclick="generateSampleInquiry()" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-royal-600 hover:bg-royal-500 text-white text-xs font-semibold transition-all">
+                <i class="fa-solid fa-plus text-xs"></i>
+                <span>Generate Test Booking</span>
+              </button>
+            ` : ''}
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(inq => {
+        const statusColors = {
+          'New': 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40',
+          'Contacted': 'bg-blue-500/20 text-blue-300 border-blue-500/40',
+          'Archived': 'bg-slate-700/40 text-slate-300 border-slate-600/40'
+        };
+        const currentBadge = statusColors[inq.status] || statusColors['New'];
+        const formattedDate = new Date(inq.timestamp).toLocaleString(undefined, {
+          month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
+        });
+
+        return `
+          <div class="p-4 sm:p-5 rounded-2xl bg-navy-950/80 border border-white/10 space-y-3 transition-all hover:border-royal-500/30">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/5 pb-3">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-navy-800 border border-white/10 text-royal-400 flex items-center justify-center font-bold text-sm">
+                  ${inq.name.charAt(0).toUpperCase()}
+                </div>
+                <div>
+                  <div class="text-sm font-bold text-white">${escapeHtml(inq.name)}</div>
+                  <div class="text-[11px] text-slate-400 font-mono flex items-center gap-2">
+                    <span>${formattedDate}</span>
+                    <span>•</span>
+                    <span class="text-royal-400 font-semibold">${escapeHtml(inq.interest)}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2">
+                <select onchange="updateInquiryStatus('${inq.id}', this.value)" class="text-xs px-2.5 py-1 rounded-lg bg-navy-900 border border-white/15 text-slate-200 focus:outline-none cursor-pointer">
+                  <option value="New" ${inq.status === 'New' ? 'selected' : ''}>🟢 New</option>
+                  <option value="Contacted" ${inq.status === 'Contacted' ? 'selected' : ''}>🔵 Contacted</option>
+                  <option value="Archived" ${inq.status === 'Archived' ? 'selected' : ''}>⚪ Archived</option>
+                </select>
+                <button type="button" onclick="deleteInquiry('${inq.id}')" class="w-7 h-7 rounded-lg bg-navy-800 hover:bg-red-900/60 text-slate-400 hover:text-red-300 flex items-center justify-center text-xs transition-all" title="Delete Inquiry">
+                  <i class="fa-solid fa-trash-can"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="space-y-2 text-xs">
+              <div class="flex items-center gap-2 text-slate-300">
+                <i class="fa-solid fa-envelope text-royal-400"></i>
+                <a href="mailto:${escapeHtml(inq.email)}?subject=Re: Inquiry on ${escapeHtml(inq.interest)}" class="hover:text-royal-300 underline font-mono">${escapeHtml(inq.email)}</a>
+                <button type="button" onclick="navigator.clipboard.writeText('${escapeHtml(inq.email)}')" class="text-[10px] text-slate-400 hover:text-white px-1.5 py-0.5 rounded bg-navy-900 border border-white/10" title="Copy email">
+                  Copy
+                </button>
+              </div>
+
+              <div class="p-3 rounded-xl bg-navy-900/60 border border-white/5 text-slate-300 leading-relaxed whitespace-pre-wrap font-sans text-xs">
+                ${escapeHtml(inq.message)}
+              </div>
+            </div>
+
+            <div class="pt-1 flex items-center justify-end gap-2">
+              <a href="mailto:${escapeHtml(inq.email)}?subject=Re: Consultation Inquiry - Guzail AI&body=Hi ${encodeURIComponent(inq.name)},%0D%0A%0D%0AThank you for reaching out regarding ${encodeURIComponent(inq.interest)}.%0D%0A%0D%0A" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-royal-600 hover:bg-royal-500 text-white text-[11px] font-semibold transition-all shadow-sm">
+                <i class="fa-solid fa-reply text-[10px]"></i>
+                <span>Direct Reply via Email</span>
+              </a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function updateInquiryStatus(id, newStatus) {
+      const inquiries = getStoredInquiries();
+      const target = inquiries.find(i => i.id === id);
+      if (target) {
+        target.status = newStatus;
+        saveStoredInquiries(inquiries);
+      }
+    }
+
+    function deleteInquiry(id) {
+      if (confirm("Are you sure you want to delete this inquiry?")) {
+        let inquiries = getStoredInquiries();
+        inquiries = inquiries.filter(i => i.id !== id);
+        saveStoredInquiries(inquiries);
+      }
+    }
+
+    function clearAllInquiries() {
+      if (confirm("Are you sure you want to clear all inquiries from the list?")) {
+        saveStoredInquiries([]);
+      }
+    }
+
+    function generateSampleInquiry() {
+      const sampleNames = ["Sarah Jenkins", "Michael Zhang", "Alexander Vance", "Elena Rostova"];
+      const sampleInterests = ["AI Automation & Agents", "RAG / Chatbot Systems", "Workflow Pipelines (n8n/Make)", "Web Development & UX"];
+      const sampleMessages = [
+        "We are looking to implement an AI customer support bot that can connect with our internal Notion and Zendesk data to handle tier-1 queries.",
+        "Need a reliable n8n workflow to synchronize new leads from our Facebook Ads into HubSpot CRM and trigger an instant Slack notification.",
+        "Interested in building a custom web portal with modern AI workflows for client onboarding and automated reporting."
+      ];
+
+      const randomName = sampleNames[Math.floor(Math.random() * sampleNames.length)];
+      const randomInterest = sampleInterests[Math.floor(Math.random() * sampleInterests.length)];
+      const randomMsg = sampleMessages[Math.floor(Math.random() * sampleMessages.length)];
+
+      const newInquiry = {
+        id: 'inq_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+        name: randomName,
+        email: randomName.toLowerCase().replace(' ', '.') + '@company.com',
+        interest: randomInterest,
+        message: randomMsg,
+        status: 'New',
+        timestamp: new Date().toISOString()
+      };
+
+      const inquiries = getStoredInquiries();
+      inquiries.unshift(newInquiry);
+      saveStoredInquiries(inquiries);
+    }
+
+    function exportInquiriesCSV() {
+      const inquiries = getStoredInquiries();
+      if (inquiries.length === 0) {
+        alert("No inquiries to export.");
+        return;
+      }
+
+      let csv = "ID,Timestamp,Name,Email,Area of Interest,Status,Message\n";
+      inquiries.forEach(i => {
+        const row = [
+          `"${i.id}"`,
+          `"${i.timestamp}"`,
+          `"${(i.name || '').replace(/"/g, '""')}"`,
+          `"${(i.email || '').replace(/"/g, '""')}"`,
+          `"${(i.interest || '').replace(/"/g, '""')}"`,
+          `"${(i.status || '').replace(/"/g, '""')}"`,
+          `"${(i.message || '').replace(/"/g, '""')}"`
+        ];
+        csv += row.join(',') + "\n";
+      });
+
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.setAttribute("href", url);
+      link.setAttribute("download", `guzail_bookings_${new Date().toISOString().slice(0, 10)}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // ==========================================
+    // 4. PROJECT UPLOAD & MANAGEMENT
+    // ==========================================
+    function previewUploadedImage(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      processImageFile(file);
+    }
+
+    function processImageFile(file) {
+      if (!file.type.startsWith('image/')) {
+        alert("Please select a valid image file (PNG, JPG, WebP, GIF).");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const base64Data = e.target.result;
+        document.getElementById('proj-image-data').value = base64Data;
+        document.getElementById('image-preview-img').src = base64Data;
+        document.getElementById('image-preview-name').innerText = file.name || 'Image Attached';
+        document.getElementById('image-preview-box').classList.remove('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function clearAttachedImage() {
+      document.getElementById('proj-image-file').value = '';
+      document.getElementById('proj-image-data').value = '';
+      document.getElementById('image-preview-box').classList.add('hidden');
+    }
+
+    // Drag and Drop support on drop zone
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropZone = document.getElementById('drop-zone');
+      if (dropZone) {
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.add('border-royal-400', 'bg-navy-900');
+          }, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.remove('border-royal-400', 'bg-navy-900');
+          }, false);
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          const dt = e.dataTransfer;
+          const files = dt.files;
+          if (files && files.length > 0) {
+            processImageFile(files[0]);
+          }
+        }, false);
+      }
+    });
+
+    function resetProjectForm() {
+      document.getElementById('project-upload-form').reset();
+      document.getElementById('project-edit-id').value = '';
+      document.getElementById('proj-image-data').value = '';
+      document.getElementById('image-preview-box').classList.add('hidden');
+      document.getElementById('project-form-title').innerText = 'Upload New Project';
+      document.getElementById('proj-save-btn-text').innerText = 'Publish Project to Website';
+    }
+
+    function normalizeUrl(url) {
+      if (!url) return '';
+      let clean = url.trim();
+      if (!clean) return '';
+      if (!/^https?:\/\//i.test(clean)) {
+        clean = 'https://' + clean;
+      }
+      return clean;
+    }
+
+    function saveProjectForm(e) {
+      e.preventDefault();
+      const editId = document.getElementById('project-edit-id').value;
+      const title = document.getElementById('proj-title').value.trim();
+      const summary = document.getElementById('proj-summary').value.trim();
+      const rawWebsiteLink = document.getElementById('proj-website-link').value.trim();
+      const websiteUrl = normalizeUrl(rawWebsiteLink);
+      const imageData = document.getElementById('proj-image-data').value;
+
+      if (!title || !summary) {
+        alert("Please enter both a Project Title and Short Description.");
+        return;
+      }
+
+      const projects = getStoredProjects();
+
+      if (editId) {
+        const target = projects.find(p => p.id === editId);
+        if (target) {
+          target.title = title;
+          target.summary = summary;
+          target.websiteUrl = websiteUrl;
+          if (imageData) {
+            target.image = imageData;
+          }
+          target.updatedAt = new Date().toISOString();
+        }
+      } else {
+        const newProj = {
+          id: 'proj_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+          title,
+          summary,
+          websiteUrl: websiteUrl || null,
+          image: imageData || null,
+          createdAt: new Date().toISOString()
+        };
+        projects.push(newProj);
+      }
+
+      saveStoredProjects(projects);
+      resetProjectForm();
+      alert(editId ? "Project updated successfully!" : "Project uploaded and published to the website!");
+    }
+
+    function editProject(id) {
+      const projects = getStoredProjects();
+      const p = projects.find(item => item.id === id);
+      if (!p) return;
+
+      document.getElementById('project-edit-id').value = p.id;
+      document.getElementById('proj-title').value = p.title;
+      document.getElementById('proj-summary').value = p.summary;
+      document.getElementById('proj-website-link').value = p.websiteUrl || '';
+
+      if (p.image) {
+        document.getElementById('proj-image-data').value = p.image;
+        document.getElementById('image-preview-img').src = p.image;
+        document.getElementById('image-preview-name').innerText = 'Current Image';
+        document.getElementById('image-preview-box').classList.remove('hidden');
+      } else {
+        clearAttachedImage();
+      }
+
+      document.getElementById('project-form-title').innerText = 'Edit Project: ' + p.title;
+      document.getElementById('proj-save-btn-text').innerText = 'Save Project Changes';
+
+      document.getElementById('admin-tab-projects').scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function deleteProject(id) {
+      if (confirm("Are you sure you want to delete this project from the website?")) {
+        let projects = getStoredProjects();
+        projects = projects.filter(p => p.id !== id);
+        saveStoredProjects(projects);
+      }
+    }
+
+    function removeAllProjects() {
+      if (confirm("Are you sure you want to remove ALL projects from the website?")) {
+        saveStoredProjects([]);
+        alert("All projects have been removed from the website.");
+      }
+    }
+
+    function renderAdminProjects() {
+      const projects = getStoredProjects();
+      const container = document.getElementById('admin-projects-list');
+      const counter = document.getElementById('admin-projects-counter');
+      const tabCount = document.getElementById('tab-projects-count');
+
+      if (counter) counter.innerText = `${projects.length} published`;
+      if (tabCount) tabCount.innerText = projects.length;
+
+      if (projects.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-10 px-4 rounded-2xl bg-navy-950/60 border border-dashed border-white/10 space-y-2">
+            <div class="w-10 h-10 rounded-full bg-navy-800 text-slate-500 flex items-center justify-center mx-auto text-sm">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div class="text-sm font-semibold text-white">No Projects Currently Uploaded</div>
+            <p class="text-xs text-slate-400 max-w-sm mx-auto">Use the upload form above to add project titles, short descriptions, images, and live website links.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = projects.map((p, idx) => {
+        const numStr = (idx + 1) < 10 ? `0${idx + 1}` : `${idx + 1}`;
+        return `
+          <div class="p-4 rounded-2xl bg-navy-950/80 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all hover:border-white/20">
+            <div class="flex items-start gap-3.5 flex-1 min-w-0">
+              ${p.image ? `
+                <img src="${p.image}" alt="${escapeHtml(p.title)}" class="w-16 h-16 object-cover rounded-xl border border-white/10 shrink-0 shadow-sm" />
+              ` : `
+                <div class="w-16 h-16 rounded-xl bg-royal-600/20 text-royal-400 border border-royal-500/30 flex items-center justify-center font-mono font-bold text-base shrink-0">
+                  ${numStr}
+                </div>
+              `}
+              <div class="space-y-1 flex-1 min-w-0">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-royal-950 text-royal-400 border border-royal-500/30 font-bold">PROJECT ${numStr}</span>
+                  ${p.websiteUrl ? `
+                    <a href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:underline flex items-center gap-1">
+                      <i class="fa-solid fa-link text-[8px]"></i> Live Link
+                    </a>
+                  ` : ''}
+                </div>
+                <h5 class="text-sm font-bold text-white truncate">${escapeHtml(p.title)}</h5>
+                <p class="text-xs text-slate-300 line-clamp-2 leading-relaxed">${escapeHtml(p.summary)}</p>
+                ${p.websiteUrl ? `
+                  <div class="pt-0.5 text-[11px] text-blue-400 truncate">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] mr-1"></i>
+                    <a href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="hover:underline">${escapeHtml(p.websiteUrl)}</a>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 self-end sm:self-center shrink-0">
+              <button type="button" onclick="editProject('${p.id}')" class="px-3 py-1.5 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 hover:text-white border border-white/10 text-xs font-semibold flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-pen-to-square text-xs text-blue-400"></i>
+                <span>Edit</span>
+              </button>
+              <button type="button" onclick="deleteProject('${p.id}')" class="px-3 py-1.5 rounded-xl bg-red-950/40 hover:bg-red-900/60 text-red-300 text-xs font-semibold border border-red-500/30 flex items-center gap-1.5 transition-all">
+                <i class="fa-solid fa-trash-can text-xs"></i>
+                <span>Delete</span>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ==========================================
+    // 5. DYNAMIC PUBLIC PROJECTS RENDERING
+    // ==========================================
+    function renderPublicProjects() {
+      const projects = getStoredProjects();
+      const container = document.getElementById('projects-container');
+      if (!container) return;
+
+      if (projects.length === 0) {
+        container.innerHTML = `
+          <div class="glass-card rounded-3xl p-8 sm:p-12 border border-white/10 text-center space-y-5 reveal-elem active">
+            <div class="w-16 h-16 rounded-2xl bg-royal-600/20 text-royal-400 border border-royal-500/30 flex items-center justify-center mx-auto text-2xl shadow-glow-sm">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            
+            <div class="max-w-xl mx-auto space-y-2">
+              <h3 class="text-2xl font-bold text-white">Portfolio Updating</h3>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Featured showcase projects are ready to be uploaded. Use the Admin Portal to upload project titles, descriptions, images, and live website links.
+              </p>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+              <button type="button" onclick="openAdminPortal('projects')" class="inline-flex items-center gap-2 bg-royal-600 hover:bg-royal-500 text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl transition-all shadow-glow-sm">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <span>Upload Project (Admin)</span>
+              </button>
+              <a href="#contact" class="inline-flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-slate-200 hover:text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-xl border border-white/10 transition-all">
+                <i class="fa-solid fa-handshake text-royal-400"></i>
+                <span>Book a Consultation</span>
+              </a>
+            </div>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = projects.map((p, idx) => {
+        const numStr = (idx + 1) < 10 ? `0${idx + 1}` : `${idx + 1}`;
+        const hasImage = Boolean(p.image);
+
+        return `
+          <article class="glass-card rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 relative overflow-hidden group reveal-elem active hover:border-royal-500/40 transition-all duration-300">
+            <div class="grid grid-cols-1 ${hasImage ? 'lg:grid-cols-12' : ''} gap-8 items-center">
+              
+              ${hasImage ? `
+                <!-- Project Image Preview Column -->
+                <div class="lg:col-span-5 relative rounded-2xl overflow-hidden border border-white/15 bg-navy-950 group/img aspect-video sm:aspect-[4/3] lg:aspect-auto lg:h-72 shadow-lg">
+                  <img src="${p.image}" alt="${escapeHtml(p.title)}" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent pointer-events-none"></div>
+                  
+                  ${p.websiteUrl ? `
+                    <a href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="absolute bottom-3 right-3 px-3 py-1.5 rounded-xl bg-royal-600/90 hover:bg-royal-500 text-white text-xs font-semibold backdrop-blur-md border border-white/20 shadow-glow-sm flex items-center gap-1.5 transition-all">
+                      <span>Visit Site</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                  ` : ''}
+                </div>
+              ` : ''}
+
+              <!-- Project Text & Details Column -->
+              <div class="${hasImage ? 'lg:col-span-7' : 'max-w-4xl'} space-y-5">
+                <div class="flex items-center gap-3">
+                  <span class="px-3 py-1 rounded-lg bg-royal-600/20 border border-royal-500/30 text-royal-400 font-mono text-xs font-bold">
+                    PROJECT ${numStr}
+                  </span>
+                  ${p.websiteUrl ? `
+                    <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Online
+                    </span>
+                  ` : ''}
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-bold text-white group-hover:text-royal-400 transition-colors">
+                  ${escapeHtml(p.title)}
+                </h3>
+
+                <p class="text-slate-300 text-sm sm:text-base leading-relaxed whitespace-pre-wrap font-sans">
+                  ${escapeHtml(p.summary)}
+                </p>
+
+                <div class="pt-2 flex flex-wrap items-center gap-3">
+                  ${p.websiteUrl ? `
+                    <a href="${escapeHtml(p.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-royal-600 hover:bg-royal-500 text-white text-xs sm:text-sm font-bold py-3 px-5 rounded-xl transition-all duration-200 shadow-glow-sm hover:shadow-glow-md">
+                      <span>Visit Website</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                  ` : ''}
+
+                  <button type="button" onclick="openDynamicCaseStudyModal('${p.id}')" class="inline-flex items-center gap-2 bg-navy-800 hover:bg-navy-700 text-slate-200 hover:text-white text-xs sm:text-sm font-semibold py-3 px-5 rounded-xl border border-white/10 transition-all">
+                    <i class="fa-solid fa-expand text-xs text-royal-400"></i>
+                    <span>View Full Details</span>
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function openDynamicCaseStudyModal(projectId) {
+      const projects = getStoredProjects();
+      const project = projects.find(p => p.id === projectId);
+      if (!project) return;
+
+      const modal = document.getElementById('case-study-modal');
+      const content = document.getElementById('modal-content');
+
+      content.innerHTML = `
+        <div class="space-y-4">
+          
+          <div class="space-y-2 border-b border-white/10 pb-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-0.5 rounded bg-royal-600/20 text-royal-400 font-mono text-xs font-bold">PROJECT DETAILS</span>
+              ${project.websiteUrl ? `
+                <a href="${escapeHtml(project.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-1">
+                  <span>Visit Website</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              ` : ''}
+            </div>
+            <h3 id="modal-title" class="text-2xl sm:text-3xl font-bold text-white">${escapeHtml(project.title)}</h3>
+          </div>
+
+          ${project.image ? `
+            <div class="rounded-2xl overflow-hidden border border-white/15 max-h-80 bg-navy-950">
+              <img src="${project.image}" alt="${escapeHtml(project.title)}" class="w-full h-full object-contain" />
+            </div>
+          ` : ''}
+
+          <div class="space-y-2">
+            <div class="text-xs font-mono text-royal-400 uppercase font-semibold">About This Project:</div>
+            <p class="text-sm text-slate-300 leading-relaxed whitespace-pre-wrap font-sans">
+              ${escapeHtml(project.summary)}
+            </p>
+          </div>
+
+          ${project.websiteUrl ? `
+            <div class="p-4 rounded-xl bg-navy-900/80 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <div class="text-xs font-mono text-slate-400 uppercase">Live Website URL</div>
+                <a href="${escapeHtml(project.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm text-blue-400 hover:underline font-mono truncate block max-w-sm">
+                  ${escapeHtml(project.websiteUrl)}
+                </a>
+              </div>
+              <a href="${escapeHtml(project.websiteUrl)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-royal-600 hover:bg-royal-500 text-white text-xs font-semibold transition-all shrink-0 shadow-sm">
+                <span>Open Link</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              </a>
+            </div>
+          ` : ''}
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between gap-3">
+            <button type="button" onclick="closeCaseStudyModal()" class="px-4 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 text-slate-300 hover:text-white text-xs font-semibold transition-all">
+              Close
+            </button>
+            <a href="#contact" onclick="closeCaseStudyModal()" class="inline-flex items-center gap-2 bg-royal-600 hover:bg-royal-500 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-glow-sm">
+              <span>Discuss Project with GUZAIL</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeCaseStudyModal() {
+      const modal = document.getElementById('case-study-modal');
+      modal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Escape helper
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Modal click outside
+    window.addEventListener('click', (e) => {
+      const caseModal = document.getElementById('case-study-modal');
+      const adminModal = document.getElementById('admin-modal');
+      if (e.target === caseModal) {
+        closeCaseStudyModal();
+      }
+      if (e.target === adminModal) {
+        closeAdminPortal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeCaseStudyModal();
+        closeAdminPortal();
+        closeMobileMenu();
+      }
+    });
+
+    // Mobile Navigation Handlers
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMobileMenu() {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    }
+
+    function openMobileMenu() {
+      mobileMenu.classList.remove('hidden');
+      hamburgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
+    // Navbar Scroll & Background State
+    const mainHeader = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        mainHeader?.classList.add('py-2');
+        mainHeader?.classList.remove('py-4');
+      } else {
+        mainHeader?.classList.add('py-4');
+        mainHeader?.classList.remove('py-2');
+      }
+    }, { passive: true });
+
+    // Scroll Reveal & Skill Bars IntersectionObserver
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPublicProjects();
+      updateInquiriesBadges();
+
+      if (window.location.hash === '#admin') {
+        openAdminPortal();
+      }
+
+      // 1. Reveal Elements on Scroll
+      const revealElems = document.querySelectorAll('.reveal-elem');
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElems.forEach(el => revealObserver.observe(el));
+
+      // 2. Animate Skill Bars
+      const skillSection = document.getElementById('skills');
+      const skillBars = document.querySelectorAll('.skill-progress, .skill-fill-bar');
+
+      if (skillSection && skillBars.length > 0) {
+        const skillObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              skillBars.forEach(bar => {
+                const percent = bar.getAttribute('data-percent') || '0';
+                bar.style.width = percent + '%';
+              });
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.2
+        });
+
+        skillObserver.observe(skillSection);
+      }
+    });
+
+    // Contact Form Handler with Inquiries persistence
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const interest = document.getElementById('contact-interest').value;
+      const message = document.getElementById('contact-message').value.trim();
+      const feedback = document.getElementById('form-feedback');
+      const submitBtn = document.getElementById('submit-btn');
+
+      // Record to inquiries storage
+      const newInquiry = {
+        id: 'inq_' + Date.now() + '_' + Math.random().toString(36).substr(2, 4),
+        name: name,
+        email: email,
+        interest: interest,
+        message: message,
+        status: 'New',
+        timestamp: new Date().toISOString()
+      };
+
+      const inquiries = getStoredInquiries();
+      inquiries.unshift(newInquiry);
+      saveStoredInquiries(inquiries);
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>Saving & Preparing Email...</span>';
+
+      setTimeout(() => {
+        feedback.classList.remove('hidden');
+        submitBtn.innerHTML = '<span>Booking Recorded ✓</span>';
+        
+        // Open default mail client with pre-filled content
+        const mailtoLink = `mailto:guzailfaisal@gmail.com?subject=${encodeURIComponent('Inquiry: ' + interest + ' - ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nInterest: ' + interest + '\n\nMessage:\n' + message)}`;
+        window.location.href = mailtoLink;
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<span>Send Message & Book Consultation →</span>';
+          document.getElementById('contact-form').reset();
+        }, 3500);
+      }, 500);
+    }
+  </script>
+</body>
+</html>
